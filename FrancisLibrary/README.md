@@ -19,4 +19,4 @@ pip install FrancisLibrary
 ## License
 
 This project is licensed under the MIT License - see the LICENSE in the same folder as this README file for details.
-
+modified by jack :)
