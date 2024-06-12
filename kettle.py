@@ -1,6 +1,5 @@
 import time
-
-#from FrancisLibrary import healthycooking
+from francislib import alarms, temperature 
 
 # returns True if the measured temperature is above or equal to 100 C
 def alarm_when_boiling(measured_temperature, user_selection):
@@ -13,10 +12,10 @@ def alarm_when_boiling(measured_temperature, user_selection):
 def alarm():
     """creates alarm sound for 5 secounds and pauses then decreases by one secound until 0"""
     for i in range (5):
-        #healthycooking.set_alarm(True)
+        alarms.set_alarm(True)
         print(True)
         time.sleep(5 - i)
-        #healthycooking.set_alarm(False)
+        alarms.set_alarm(False)
         print(False)
         time.sleep(.5)
     
@@ -27,8 +26,8 @@ if __name__ == "__main__":
     while True:
 # retrieve water temperature
 
-        #measured_temperature = healthycooking.get_temperature()
-        measured_temperature = float(input("temp: "))
+        measured_temperature = temperature.get_temperature()
+        #measured_temperature = float(input("temp: "))
         print(measured_temperature)
 # update the alarm_state
         user_selection = int(input("User Selection: "))
